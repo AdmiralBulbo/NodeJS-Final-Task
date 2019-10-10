@@ -1,0 +1,34 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:f="sap.ui.layout.form" xmlns="sap.m"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Panel width="auto" class="sapUiNoContentPadding">
+		<headerToolbar>
+			<Toolbar>
+				<ToolbarSpacer/>
+				<Title text="{i18n>lbWorkerId} {odata>/_id}" level="H2"/>
+				<ToolbarSpacer/>
+			</Toolbar>
+			</headerToolbar>
+			<content> 
+				<f:SimpleForm editable="true" layout="ResponsiveGridLayout" labelSpanL="3" labelSpanM="3" emptySpanL="4" emptySpanM="4" columnsL="1"
+					columnsM="1">
+					<f:content>
+						<Label text="{i18n>lbFName}"/>
+						<Input value="{odata>/firstname}"/>
+                        <Label text="{i18n>lbSName}"/>
+						<Input value="{odata>/secondname}"/>
+						<Label text="{i18n>lbAge}"/>
+						<Input value="{odata>/age}" type="Number"/>
+						<Label text="{i18n>lbGender}"/>
+						<ComboBox placeholder="{i18n>phGender}" value="{odata>/sex}">
+								<items>
+									<core:Item key="item-1-key" text="{i18n>male}" id="item0"/>
+									<core:Item key="item-2-key" text="{i18n>female}" id="item1"/>
+								</items>
+						</ComboBox>
+						<Label text="{i18n>lbPosition}"/>
+						<Input value="{odata>/position}"/>
+					</f:content>
+				</f:SimpleForm>
+			</content>
+		</Panel> 
+	</core:FragmentDefinition>

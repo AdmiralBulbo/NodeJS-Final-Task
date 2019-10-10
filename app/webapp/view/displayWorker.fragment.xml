@@ -1,0 +1,31 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" 
+    xmlns:mvc="sap.ui.core.mvc" 
+    xmlns:f="sap.ui.layout.form" 
+    xmlns="sap.m" 
+    xmlns:html="http://www.w3.org/1999/xhtml">
+    <Panel width="auto" class="sapUiNoContentPadding">
+        <headerToolbar>
+            <Toolbar>
+                <ToolbarSpacer/>
+                <Title text="{i18n>lbWorkerId} {odata>/_id}" level="H2"/>
+                <ToolbarSpacer/>
+            </Toolbar>
+        </headerToolbar>
+        <content>
+            <f:SimpleForm editable="false" layout="ResponsiveGridLayout" labelSpanL="3" labelSpanM="3" emptySpanL="4" emptySpanM="4" columnsL="1" columnsM="1">
+                <f:content>
+                    <Label text="{i18n>lbFName}"/>
+                    <Text text="{odata>/firstname}"/>
+                    <Label text="{i18n>lbSName}"/>
+                    <Text text="{odata>/secondname}"/>
+                    <Label text="{i18n>lbAge}"/>
+                    <Text text="{odata>/age}"/>
+                    <Label text="{i18n>lbGender}"/>
+                    <Text text="{odata>/sex}"/>
+                    <Label text="{i18n>lbPosition}"/>
+                    <Text text="{odata>/position}"/>
+                </f:content>
+            </f:SimpleForm>
+        </content>
+    </Panel>
+</core:FragmentDefinition>

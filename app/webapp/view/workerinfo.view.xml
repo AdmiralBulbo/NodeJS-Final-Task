@@ -1,0 +1,22 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:f="sap.ui.layout.form" xmlns="sap.m"
+	controllerName="ZKRY.Final_Task.controller.workerinfo" xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page id="page" showHeader="true">
+				<customHeader>
+					<Toolbar>
+						<Button id="btnEdit" icon="sap-icon://write-new" text="Edit" visible="true" press="onChange"/>
+						<Button id="btnSave" icon="sap-icon://accept" text="Save" visible="false" press="onSave"/>
+						<Button id="btnCancle" icon="sap-icon://decline" text="Cancle" visible="false" press="onCancle"/>
+						<Button id="btnDelete" icon="sap-icon://delete" text="Delete" visible="true" tooltip="Delete this worker" press="onDelete"/>
+						<ToolbarSpacer/>
+						<Title text="{i18n>workerInfoTitle}"/>
+						<ToolbarSpacer/>
+						<Button id="btnInfoBack" class="nav_to" icon="sap-icon://navigation-left-arrow" text="{i18n>btnBackToTable}" type="Emphasized"
+							press="onNavigate"/>
+					</Toolbar>
+				</customHeader>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

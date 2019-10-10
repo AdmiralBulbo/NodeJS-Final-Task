@@ -1,0 +1,46 @@
+<mvc:View controllerName="ZKRY.Final_Task.controller.newWorker" 
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" 
+	xmlns="sap.m" 
+	xmlns:form="sap.ui.layout.form" 
+	xmlns:core="sap.ui.core">
+	<Shell id="shell">
+		<App id="newWorker">
+			<pages>
+				<Page title="Create new worker">
+					<content>
+						<Toolbar>
+							<ToolbarSpacer/>
+							<Button id="btnBack" class="nav_to" icon="sap-icon://navigation-left-arrow" text="Back" type="Emphasized" press="onNavigate"/>
+							<ToolbarSpacer/>
+						</Toolbar>
+						<form:SimpleForm editable="true" layout="ResponsiveGridLayout" id="form0">
+							<form:content>
+								<Label text="{i18n>lbFName}" id="lblFName"/>
+								<Input width="50%" id="inFName" value="{/firstname}" placeholder="{i18n>phFName}"/>
+								<Label text="{i18n>lbSName}" id="lblSName"/>
+								<Input width="50%" id="inSName" value="{/secondname}" placeholder="{i18n>phSName}"/>
+								<Label text="{i18n>lbAge}" id="lblAge"/>
+								<Input width="50%" id="inAge" value="{/age}" placeholder="{i18n>phAge}" type="Number"/>
+								<Label text="{i18n>lbGender}"/>
+								<ComboBox width="50%" id="inGender" placeholder="{i18n>phGender}" value="{/sex}">
+									<items>
+										<core:Item key="item-1-key" text="{i18n>male}" id="item0"/>
+										<core:Item key="item-2-key" text="{i18n>female}" id="item1"/>
+									</items>
+								</ComboBox>
+								<Label text="{i18n>lbPosition}" id="lblPosition"/>
+								<Input width="50%" id="inPosition" value="{/position}" placeholder="{i18n>phPosition}"/>
+							</form:content>
+						</form:SimpleForm>
+						<Toolbar width="100%" id="toolbar1">
+							<ToolbarSpacer/>
+							<Button text="{i18n>btnSend}" id="button1" icon="sap-icon://accept" press="onFormSend"/>
+							<ToolbarSpacer/>
+							<ToolbarSpacer/>
+						</Toolbar>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

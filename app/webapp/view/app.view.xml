@@ -1,0 +1,49 @@
+<mvc:View controllerName="ZKRY.Final_Task.controller.app" 
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" 
+	xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="Workers">
+					<headerContent>
+						<Button id="btnToNew" text="Add worker" icon="sap-icon://add-employee" tooltip="Create new worker" press="onNavigate"/>
+					</headerContent>
+					<content>
+						<Table id="oDataTable" items="{odata>/value}" noDataText="No data">
+							<columns>
+								<Column>
+									<Text text="ID"/>
+								</Column>
+								<Column>
+									<Text text="Name"/>
+								</Column>
+								<Column>
+									<Text text="Age"/>
+								</Column>
+								<Column>
+									<Text text="Gender"/>
+								</Column>
+								<Column>
+									<Text text="Position"/>
+								</Column>
+								<Column/>
+							</columns>
+							<items>
+								<ColumnListItem type="Active" press="onItemPress">
+									<cells>
+										<Text text="{odata>_id}"/>
+										<Text text="{odata>firstname} {odata>secondname}"/>
+										<Text text="{odata>age}"/>
+										<Text text="{odata>sex}"/>
+										<Text text="{odata>position}"/>
+										<Button id="btnDetails" icon="sap-icon://navigation-right-arrow" tooltip="Watch more info" press="onItemPress"/>
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
