@@ -49,3 +49,4 @@ MongoClient.connect(dburl, function (err, db) {
 
 app.use('/', odataServer.handle.bind(odataServer));
 app.listen(1337);
+console.log("Server connected to MongoDB and listening on 1337. Go to localhost:1337 to open the SAPUI5 Application.")
